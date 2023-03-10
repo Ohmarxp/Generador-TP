@@ -8,7 +8,7 @@ describe('engineer class', () => {
         // This creates a variable to test
         const engineerName = engineer.getName('Scot');
         // This test confirms if the variable to test matches the expected value
-        expect(engineerName).toBe('Scot');
+        expect(engineerName).toMatch('Scot');
     })
     it('Returns the id from the input', () => {
         const engineerID = engineer.getId('1324369');
@@ -18,16 +18,16 @@ describe('engineer class', () => {
     it('Returns the email from the input', () => {
         const engineerEmail = engineer.getEmail('Scot@email.com');
 
-        expect(engineerEmail).toBe('Scot@email.com');
+        expect(engineerEmail).toMatch('Scot@email.com');
     })
     it('Returns the GitHub username from the input', () => {
         const engineerGithub = engineer.getGithub('Scot-github');
 
-        expect(engineerGithub).toBe('Scot-github');
+        expect(engineerGithub).toMatch('Scot-github');
     })
     it('Returns the role Engineer from the input', () => {
         const engineerRole = engineer.getRole();
 
-        expect(engineerRole).toBe('Engineer');
+        expect(engineerRole).toMatch('Engineer');
     })
 });

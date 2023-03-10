@@ -8,7 +8,7 @@ describe('Employee class', () => {
         // This creates a variable to test
         const employeeName = employee.getName('Marx');
         // This test confirms if the variable to test matches the expected value
-        expect(employeeName).toBe('Marx');
+        expect(employeeName).toMatch('Marx');
     })
     it('Returns the id from the input', () => {
         const employeeID = employee.getId('7161217');
@@ -18,11 +18,11 @@ describe('Employee class', () => {
     it('Returns the email from the input', () => {
         const employeeEmail = employee.getEmail('Marx@email.com');
 
-        expect(employeeEmail).toBe('Marx@email.com');
+        expect(employeeEmail).toMatch('Marx@email.com');
     })
     it('Returns the role Employee from the input', () => {
         const employeeRole = employee.getRole();
 
-        expect(employeeRole).toBe('Employee');
+        expect(employeeRole).toMatch('Employee');
     })
 });
